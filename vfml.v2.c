@@ -1,7 +1,8 @@
 #include <stdio.h>
+#define price_per_ltr 1.5
 
 int main() {
-    double start_km, end_km, liters, price;
+    double start_km, end_km, liters;
     double distance, mileage, cost;
 
     printf("Start odometer (km): ");
@@ -13,12 +14,10 @@ int main() {
     printf("Fuel used (liters): ");
     scanf("%lf", &liters);
 
-    printf("Price per liter: ");
-    scanf("%lf", &price);
 
     distance = end_km - start_km;
     mileage  = distance / liters;
-    cost     = liters * price;
+    cost     = liters * price_per_ltr;
 
     printf("Distance = %.2f km\n", distance);
     printf("Mileage  = %.2f km/l\n", mileage);
